@@ -1,77 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 22:08:29 by abouguri          #+#    #+#             */
+/*   Updated: 2024/08/12 22:08:30 by abouguri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	free_spl(char **splited)
-{
-	int	i;
-
-	i = 0;
-	while (splited[i])
-	{
-		free(splited[i]);
-		i++;
-	}
-	free(splited);
-}
-
-int	search_for_pos(t_stack *a, int key_num, int size)
-{
-	int	i;
-
-	i = 0;
-	while (--size)
-	{
-		if (a->nb <= key_num)
-			break ;
-		i++;
-		a = a->next;
-	}
-	return (i);
-}
-
-int	search_for_big(t_stack *b)
-{
-	int	i;
-	int	j;
-	int	nb;
-
-	i = 0;
-	j = 0;
-	nb = b->nb;
-	while (b)
-	{
-		if (nb < b->nb)
-		{
-			nb = b->nb;
-			i = j;
-		}
-		j++;
-		b = b->next;
-	}
-	return (i);
-}
-
-int	search_for_small(t_stack *a)
-{
-	int	i;
-	int	j;
-	int	nb;
-
-	i = 0;
-	j = 0;
-	nb = a->nb;
-	while (a)
-	{
-		if (nb > a->nb)
-		{
-			nb = a->nb;
-			i = j;
-		}
-		j++;
-		a = a->next;
-	}
-	return (i);
-}
 
 int	main(int ac, char **av)
 {

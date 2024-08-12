@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   five_less.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 22:07:55 by abouguri          #+#    #+#             */
+/*   Updated: 2024/08/12 22:07:56 by abouguri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -6,15 +17,15 @@ void	sort_three_less(t_stack **a)
 	if (check_sort(*a) == 0)
 		return ;
 	if ((*a)->nb > (*a)->next->nb)
-		ft_sa(a);
+		sa(a);
 	if (list_size(*a) == 2)
 		return ;
 	if ((*a)->nb > (*a)->next->next->nb)
-		ft_rra(a);
+		rra(a);
 	if ((*a)->next->nb > (*a)->next->next->nb)
 	{
-		ft_sa(a);
-		ft_ra(a);
+		sa(a);
+		ra(a);
 	}
 }
 
@@ -68,14 +79,14 @@ void	push_to_b(t_stack **a, t_stack **b, int i)
 	if (i < 3)
 	{
     	while (i-- > 0)
-        	ft_ra(a);
+        	ra(a);
 	}
 	else
 	{
     	while (i++ < list_size(*a))
-        	ft_rra(a);
+        	rra(a);
 	}
-	ft_pb(a, b);
+	pb(a, b);
 }
 
 void	sort_five_less(t_stack **a, t_stack **b)
@@ -92,7 +103,7 @@ void	sort_five_less(t_stack **a, t_stack **b)
 	i = find_in_arr(arr, *a, 0);
 	push_to_b(a, b, i);
 	sort_three_less(a);
-	ft_pa(a, b);
-	ft_pa(a, b);
-	ft_ra(a);
+	pa(a, b);
+	pa(a, b);
+	ra(a);
 }

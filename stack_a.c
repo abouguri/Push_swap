@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_a.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 21:54:18 by abouguri          #+#    #+#             */
+/*   Updated: 2024/08/12 21:54:19 by abouguri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sa(t_stack **a)
+void	sa(t_stack **a)
 {
 	t_stack	*save;
 
@@ -13,7 +24,7 @@ void	ft_sa(t_stack **a)
 	write(1, "sa\n", 3);
 }
 
-void	ft_pa(t_stack **a, t_stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
 	t_stack	*save_a;
 	t_stack	*save_b;
@@ -28,7 +39,7 @@ void	ft_pa(t_stack **a, t_stack **b)
 	write(1, "pa\n", 3);
 }
 
-void	ft_ra(t_stack **a)
+void	ra(t_stack **a)
 {
 	t_stack	*save;
 
@@ -41,7 +52,7 @@ void	ft_ra(t_stack **a)
 	write(1, "ra\n", 3);
 }
 
-void	ft_rra(t_stack **a)
+void	rra(t_stack **a)
 {
 	t_stack	*save;
 	t_stack	*temp;

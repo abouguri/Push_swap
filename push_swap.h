@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 22:06:03 by abouguri          #+#    #+#             */
+/*   Updated: 2024/08/12 22:06:04 by abouguri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 
 #ifndef PUSH_SWAP_H
@@ -33,16 +45,16 @@ int		list_size(t_stack *lst);
 t_stack	*ft_lstnew(int content);
 void	add_front(t_stack **lst, t_stack *new);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
-void	ft_sa(t_stack **a);
-void	ft_sb(t_stack **b);
-void	ft_pa(t_stack **a, t_stack **b);
-void	ft_pb(t_stack **a, t_stack **b);
-void	ft_ra(t_stack **a);
-void	ft_rb(t_stack **b);
-void	ft_rra(t_stack **a);
-void	ft_rrb(t_stack **b);
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
 char	**ft_split(char const *s, char c);
-int		number_of_word(char const *s1, char c);
+int		count_words(char const *s1, char c);
 void	word_malloc(char **splited, char const *s1, char c, int nw);
 void	free_func(char **splited, int i);
 int		ft_atoi(const char *str);

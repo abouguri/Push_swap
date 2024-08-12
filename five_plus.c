@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_more_than_5_numbers.c                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 21:54:37 by abouguri          #+#    #+#             */
+/*   Updated: 2024/08/12 21:54:38 by abouguri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -18,14 +28,14 @@ void	push_chunks_to_b(int i, int *tab, t_stack **a, t_stack **b)
 			if (pos <= list_size(*a) / 2)
 			{
 				while (pos--)
-					ft_ra(a);
+					ra(a);
 			}
 			else
 			{
 				while (pos++ < list_size(*a))
-					ft_rra(a);
+					rra(a);
 			}
-			ft_pb(a, b);
+			pb(a, b);
 		}
 		i += ft_chunk(size_a);
 	}
@@ -41,14 +51,14 @@ void	push_rest_to_b(t_stack **a, t_stack **b)
 		if (pos <= list_size(*a) / 2)
 		{
 			while (pos--)
-				ft_ra(a);
+				ra(a);
 		}
 		else if (pos > list_size(*a) / 2)
 		{
 			while (pos++ < list_size(*a))
-				ft_rra(a);
+				rra(a);
 		}
-		ft_pb(a, b);
+		pb(a, b);
 	}
 }
 
@@ -58,11 +68,11 @@ void	else_conditions(t_stack **a, t_stack **b, t_var *var)
 	{
 		if ((*b)->nb == var->tab[var->size_a])
 		{
-			ft_pa(a, b);
+			pa(a, b);
 			var->pos--;
 			var->key = 1;
 		}
-		ft_rrb(b);
+		rrb(b);
 	}
 }
 
@@ -74,11 +84,11 @@ void	repush_conditions(t_stack **a, t_stack **b, t_var *var)
 		{
 			if ((*b)->nb == var->tab[var->size_a])
 			{
-				ft_pa(a, b);
+				pa(a, b);
 				var->key = 1;
 			}
 			else
-				ft_rb(b);
+				rb(b);
 		}
 	}
 	else
@@ -101,10 +111,10 @@ void	sort_more_than_five(t_stack **a, t_stack **b)
 		var.pos = search_for_big(*b);
 		var.key = 0;
 		repush_conditions(a, b, &var);
-		ft_pa(a, b);
+		pa(a, b);
 		if (var.key == 1)
 		{
-			ft_sa(a);
+			sa(a);
 			var.size_a--;
 		}
 		var.size_a--;
