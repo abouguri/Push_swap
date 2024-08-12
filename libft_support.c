@@ -6,7 +6,7 @@
 /*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 22:08:09 by abouguri          #+#    #+#             */
-/*   Updated: 2024/08/12 22:08:11 by abouguri         ###   ########.fr       */
+/*   Updated: 2024/08/12 22:11:10 by abouguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_exit(void)
 {
 	write(2, "Error\n", 6);
-	exit (0);
+	exit(0);
 }
 
 int	ft_atoi(const char *str)

@@ -6,7 +6,7 @@
 /*   By: abouguri <abouguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 22:05:46 by abouguri          #+#    #+#             */
-/*   Updated: 2024/08/12 22:05:49 by abouguri         ###   ########.fr       */
+/*   Updated: 2024/08/12 22:11:33 by abouguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	free_func(char **splited, int i)
 {
 	while (i--)
-		free (splited[i]);
-	free (splited);
+		free(splited[i]);
+	free(splited);
 }
 
 void	word_malloc(char **splited, char const *s1, char c, int nw)
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	splited = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!(splited))
-		exit (0);
+		exit(0);
 	word_malloc(splited, s, c, count_words(s, c));
 	splited[count_words(s, c)] = NULL;
 	return (splited);

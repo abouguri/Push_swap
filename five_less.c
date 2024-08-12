@@ -52,7 +52,7 @@ int	find_in_arr(int *arr, t_stack *a, int c)
 			break ;
 		i++;
 	}
-	free (arr);
+	free(arr);
 	return (i);
 }
 
@@ -64,7 +64,7 @@ int	*stack_to_arr(t_stack *a)
 	i = 0;
 	tab = (int *)malloc(sizeof(int) * list_size(a));
 	if (!tab)
-		exit (0);
+		exit(0);
 	while (a)
 	{
 		tab[i] = a->nb;
@@ -78,13 +78,13 @@ void	push_to_b(t_stack **a, t_stack **b, int i)
 {
 	if (i < 3)
 	{
-    	while (i-- > 0)
-        	ra(a);
+		while (i-- > 0)
+			ra(a);
 	}
 	else
 	{
-    	while (i++ < list_size(*a))
-        	rra(a);
+		while (i++ < list_size(*a))
+			rra(a);
 	}
 	pb(a, b);
 }
