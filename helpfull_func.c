@@ -39,11 +39,8 @@ void	f_stack_a(t_stack **a, char **str)
 		i++;
 	while (i--)
 	{
-		printf("array:  %s\n", str[i]);
-
 		add_front(a, ft_lstnew(ft_atoi(str[i])));
 		ft_check_double(*a);
-
 	}
 }
 

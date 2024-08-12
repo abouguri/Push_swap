@@ -5,10 +5,6 @@
 void	ft_exit(void)
 {
 	write(2, "Error\n", 6);
-	printf("Running leaks to check for memory leaks...\n");
-    char command[50];
-    sprintf(command, "leaks %d", getpid());  // Check for leaks in the current process
-    system(command);
 	exit (0);
 }
 
